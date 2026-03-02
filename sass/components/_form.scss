@@ -1,0 +1,119 @@
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &__label {
+      font-size: 8px;
+      color: $color-gray;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    .form__icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      opacity: 0.5;
+      pointer-events: none;
+      transition: opacity $transition-main;
+    }
+
+    .form__input,
+    .form__textarea {
+      width: 100%;
+      padding: 12px 12px 12px 40px;
+      border: 1px solid $color-gray;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color $transition-main;
+    }
+
+    .form__textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    &:focus-within {
+      .form__icon {
+        opacity: 1;
+      }
+
+      .form__input,
+      .form__textarea {
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: $color-gray;
+    cursor: pointer;
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-input {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-gray;
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+      transition: background $transition-main, border-color $transition-main;
+
+      &:checked {
+        background: $color-primary;
+        border-color: $color-primary;
+      }
+
+      &:checked::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 9px;
+        border: solid $color-white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__submit-btn {
+    background: $color-primary;
+    color: $color-white;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background $transition-main;
+
+  &:hover {
+      background: $color-primary;
+    }
+  }
+}

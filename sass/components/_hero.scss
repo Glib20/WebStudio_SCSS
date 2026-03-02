@@ -1,0 +1,46 @@
+.hero {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../img/Img.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 120px 0;
+  text-align: center;
+  color: $color-white;
+
+  &__container {
+    @extend %flex-column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    @include button-primary;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      background-color: darken($color-primary, 5%);
+    }
+  }
+}

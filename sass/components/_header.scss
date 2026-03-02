@@ -1,0 +1,87 @@
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid $color-white;
+
+  &__container {
+    @extend %flex-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: $font-logo;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  &__logo-accent {
+    color: $color-dark;
+  }
+}
+
+.nav {
+  display: none; // mobile
+
+  &__list {
+    @include flex(flex-start, center, 30px);
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    color: $color-dark;
+    transition: color 250ms $transition-main;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 3px;
+      background-color: $color-primary;
+      transition: width 250ms $transition-main;
+    }
+
+    &:hover,
+    &--active {
+      color: $color-primary;
+    }
+
+    &:hover::after,
+    &--active::after {
+      width: 100%;
+    }
+  }
+}
+
+
+.contacts {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $color-gray;
+    transition: color 250ms $transition-main;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $color-gray;
+    transition: fill 250ms $transition-main;
+  }
+
+  &__item:hover &__link {
+    color: $color-primary;
+  }
+
+  &__item:hover &__icon {
+    fill: $color-primary;
+  }
+}
