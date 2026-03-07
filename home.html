@@ -13,48 +13,51 @@
     <link rel="stylesheet" href="./main.scss" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header page-header">
-      <div class="container header__container">
-        <a href="./index.html" class="header__logo">
-          Web<span class="header__logo-accent">Studio</span>
-        </a>
+<header class="header">
+  <div class="container header__container">
 
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+    <a href="./home.html" class="logo">
+      Web<span>Studio</span>
+    </a>
 
-        <nav class="nav">
-          <ul class="nav__list menu">
-            <li class="nav__item">
-              <a href="" class="link nav__link nav__link--active"
-                >Студія</a
-              >
-            </li>
-            <li class="nav__item">
-              <a href="" class="link nav__link">Портфоліо</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="link nav__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="./home.html" class="nav__link">Studio</a></li>
+        <li><a href="./portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="#" class="nav__link">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <ul class="contacts">
+      <li>
+        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+      </li>
+      <li>
+        <a href="tel:+110001111111">+11 (000) 111-11-11</a>
+      </li>
+    </ul>
+
+    <!-- Burger -->
+    <button class="menu-toggle" data-menu-open>
+      ☰
+    </button>
+
+  </div>
+</header>
+
+        <div class="mobile-menu" data-menu>
+
+  <button class="menu-close" data-menu-close>
+    ✕
+  </button>
+
+  <ul class="mobile-menu__list">
+    <li><a href="./home.html">Studio</a></li>
+    <li><a href="./portfolio.html">Portfolio</a></li>
+    <li><a href="#">Contacts</a></li>
+  </ul>
+
+</div>
 
         <ul class="contacts">
           <li class="contacts__item">
