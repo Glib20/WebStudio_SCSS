@@ -1,0 +1,23 @@
+.clients {
+  background: $section-bg;
+  padding: $section-padding 0;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    img {
+      width: 120px;
+      opacity: .6;
+      filter: grayscale(100%);
+      transition: 250ms;
+
+      &:hover {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+    }
+  }
+}

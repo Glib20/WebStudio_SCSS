@@ -1,0 +1,26 @@
+.footer {
+  background: $dark-bg;
+  color: white;
+  padding: 50px 0;
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &-logo {
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    color: $main-color;
+  }
+
+  &-contact-link {
+    color: rgba(255,255,255,0.7);
+
+    &:hover {
+      color: white;
+    }
+  }
+}

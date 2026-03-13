@@ -1,0 +1,25 @@
+.team {
+  padding: $section-padding 0;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  &-item {
+    max-width: 270px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+  }
+}
