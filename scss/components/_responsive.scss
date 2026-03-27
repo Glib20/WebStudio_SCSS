@@ -1,0 +1,57 @@
+@media (min-width: 480px) {
+  .features__list--item,
+  .work__list--item,
+  .grid > .card {
+    flex: 1 1 calc(50% - 30px);
+  }
+  .header .menu-toggle.js-open-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .menu-toggle.js-open-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .work__list--item,
+  .grid > .card {
+    flex: 1 1 calc(33.333% - 30px);
+  }
+
+  .team__item {
+    flex: 1 1 calc(50% - 30px);
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .header .menu-toggle.js-open-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .nav {
+    display: block;
+  }
+  .header .menu-toggle.js-open-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__list--item,
+  .team__item  {
+    flex: 1 1 calc(25% - 30px);
+  }
+
+  .grid > .card {
+    flex: 0 0 370px;
+  }
+}
